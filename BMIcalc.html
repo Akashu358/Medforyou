@@ -1,0 +1,298 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMI Calculator</title>
+  <script src="D:\web development\AKASH\ProjectS\MajorProject\BMIcalci.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+<style>
+  body {
+    background-color: fafcfb;
+}
+
+  .main {
+    margin: auto;
+  
+    background-color: 2a9df4;
+    text-align: center;
+    height: 250px;
+  }
+
+  .def {
+    text-align: justify;
+  }
+
+  .data {
+    text-align: justify;
+  }
+
+  .data img {
+    height: 150px;
+    width: 300px;
+    float: right;
+  }
+
+  .Categories {
+    text-align: justify;
+  }
+
+  table {
+    text-align: center;
+  }
+
+  .sub-body {
+    padding: 0px 10px;
+  }
+  
+</style>
+
+<body>
+  <section>
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">Logo</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link text-white text-end fw-bold" aria-current="page"
+                href="D:\web development\AKASH\ProjectS\MajorProject\MedForYou.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white text-end fw-bold"
+                href="D:\web development\AKASH\ProjectS\MajorProject\BMIcalc.html">BMI</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white text-end fw-bold" href="#">Wishlist</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white text-end fw-bold" href="D:\web development\AKASH\ProjectS\MajorProject\Loginpage.html">Sign In</a>
+            </li>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </section>
+  <section class="sub-body">
+    <div class="container mt-3">
+      <h1>Calculate Your Body Mass Index</h1>
+      <p class="def">Body mass index (BMI) is a value derived from the mass (weight) and height of a person. The BMI is
+        defined as
+        the body mass divided by the square of the body height, and is expressed in units of kg/m2, resulting from
+        mass in kilograms (kg) and height in metres (m).
+      </p>
+      <div class="row">
+        <div class="col-md-5  main">
+
+          <h3 class="mt-2">BMI Calculator</h3>
+
+          <label for="height">Enter Your Height (in cm)</label> <br>
+          <input type="number" id="height" required> <br>
+          <label for="weight">Enter Your Weight (in Kg)</label> <br>
+          <input type="number" id="weight" required> <br><br>
+          <button class="btn btn-primary btn-outline-light text-light fw-bold" onclick="Calculate()">Calculate BMI</button>
+
+
+        </div>
+        <div class="col-md-6 main">
+          <h4 class="text-start mt-2">Your BMI Value is: <span id="BMI"></span></h4> <br>
+          <h4 class="text-start">Result: <span id="msg"></span></h4> <br>
+          <h4 class="text-start">Recommendations: <span id="recommend"></span></h4>
+
+        </div>
+      </div>
+
+      <br>
+      <div class="data text-justify">
+        The BMI is expressed in kg/m2, resulting from mass in kilograms and height in metres. If pounds and inches are
+        used, a conversion factor of 703 (kg/m2)/(lb/in2) is applied. When the term BMI is used informally, the units
+        are
+        usually omitted. <br>
+        <img src="D:\web development\AKASH\ProjectS\MajorProject\bmi-formula-calculation.png" alt="BMI_formula"><br>
+        BMI provides a simple numeric measure of a person's thickness or thinness, allowing health professionals to
+        discuss weight problems more objectively with their patients. BMI was designed to be used as a simple means of
+        classifying average sedentary (physically inactive) populations, with an average body composition. For such
+        individuals, the BMI value recommendations as of 2014 are as follows: 18.5 to 24.9 kg/m2 may indicate optimal
+        weight, lower than 18.5 may indicate underweight, 25 to 29.9 may indicate overweight, and 30 or more may
+        indicate obese. Lean male athletes often have a high muscle-to-fat ratio and therefore a BMI that is
+        misleadingly high
+        relative to their body-fat percentage
+      </div>
+
+      <div class="Categories">
+        <h2 class="mt-3">Categories</h2>
+        <p>A common use of the BMI is to assess how far an individual's body weight departs from what is normal for a
+          person's height. The weight excess or deficiency may, in part, be accounted for by body fat (adipose tissue)
+          although other factors such as muscularity also affect BMI significantly (see discussion below and
+          overweight).
+          <br>
+          The WHO regards an adult BMI of less than 18.5 as underweight and possibly indicative of malnutrition, an
+          eating
+          disorder, or other health problems, while a BMI of 25 or more is considered overweight and 30 or more is
+          considered obese. In addition to the principle, international WHO BMI cut-off points (16, 17, 18.5, 25, 30,
+          35 and 40), four additional cut-off points for at-risk Asians were identified (23, 27.5, 32.5 and 37.5).
+          These ranges of BMI values are valid only as statistical categories.
+        </p>
+        <div class="col-md- col-lg-6 col-sm-12">
+          <h3 class="text-center">BMI, basic categories as per WHO</h3>
+          <table class="table table-responsive-sm table-bordered border-dark">
+            <tr class="table-active">
+              <th>Category</th>
+              <th>BMI (kg/m2)</th>
+
+            </tr>
+            <tr>
+              <td class="text-start text-warning">Underweight (Severe thinness)</td>
+              <td>
+                < 16.0 </td>
+
+            </tr>
+            <tr>
+
+              <td class="text-start text-warning">Underweight (Moderate thinness)</td>
+              <td>16.0 – 16.9</td>
+            </tr>
+            <tr>
+
+              <td class="text-start text-success">Underweight (Mild thinness)</td>
+              <td> 17.0 – 18.4</td>
+            </tr>
+            <tr>
+
+              <td class="text-start text-success">Normal range</td>
+              <td> 18.5 – 24.9</td>
+            </tr>
+            <tr>
+
+              <td class="text-start text-danger">Overweight (Pre-obese)</td>
+              <td> 25.0 – 29.9</td>
+            </tr>
+            <tr>
+
+              <td class="text-start text-danger">Obese (Class I)</td>
+              <td> 30.0 – 34.9</td>
+            </tr>
+            <tr>
+
+              <td class="text-start text-danger">Obese (Class II)</td>
+              <td> 35.0 – 39.9</td>
+            </tr>
+            <tr>
+
+              <td class="text-start text-danger">Obese (Class III)</td>
+              <td> ≥ 40.0</td>
+            </tr>
+
+          </table>
+        </div>
+      </div>
+
+    </div>
+    <footer class="container pt-d pb-4 mt-4 bg-dark">
+      <div class="container text-start text-md-left">
+        <p class="text-white text-md-left">Questions? call 000-987-654-3210</p>
+        <div class="row text-start text-md-left">
+          <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-4">
+            <ul>
+              <h5>Know us</h5>
+              <li>
+                <a href="#">About US</a>
+              </li>
+              <li>
+                <a href="#">Career</a>
+              </li>
+              <li>
+                <a href="#">Paid Partnership</a>
+              </li>
+              <li>
+                <a href="#">Corporate Governance</a>
+              </li>
+              <li>
+                <a href="#">Bussiness Partner</a>
+              </li>
+              <li>
+                <a href="#">Blog</a>
+              </li>
+            </ul>
+
+          </div>
+
+          <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-4">
+            <h5>Featured Categories</h5>
+            <ul>
+              <li>
+                <a href="#">Health care Devices</a>
+              </li>
+              <li>
+                <a href="#">Respiratory Medicines </a>
+              </li>
+              <li>
+                <a href="#">Skin care</a>
+              </li>
+              <li>
+                <a href="#">Home Care</a>
+              </li>
+              <li>
+                <a href="#">Mother and Baby Care</a>
+              </li>
+              <li>
+                <a href="#">Trending Products</a>
+              </li>
+              <li>
+                <a href="#">Diabetic Care</a>
+              </li>
+              <li>
+                <a href="#"> Clearance Sale</a>
+              </li>
+            </ul>
+
+          </div>
+          <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-4">
+            <h5>Need help</h5>
+            <ul>
+              <li>
+                <a href="#">Browse all Medicine</a>
+              </li>
+              <li>
+                <a href="#">Browse all Cities</a>
+              </li>
+              <li>
+                <a href="#">Browse all Molecule</a>
+              </li>
+              <li>
+                <a href="#">Browse all stores</a>
+              </li>
+              <li>
+                <a href="#">FAQS</a>
+              </li>
+            </ul>
+
+          </div>
+
+        </div>
+        <p class="text-white text-md-left">Med for you&nbsp;<i class="fa-brands fa-facebook text-primary"></i>
+          <i class="fa-brands fa-instagram text-primary"></i>
+          <i class="fa-brands fa-twitter text-primary"></i>
+        </p>
+      </div>
+
+    </footer>
+
+  </section>
+  
+
+</body>
+
+</html>
